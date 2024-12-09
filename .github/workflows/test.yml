@@ -1,11 +1,12 @@
 name: TestBot
 
 on:
-  workflow_dispatch:  
+  workflow_dispatch: 
 
 jobs:
-  test-telegram:
+  send-message:
     runs-on: ubuntu-latest
+
     steps:
       - name: Send Telegram Message
         env:
@@ -14,4 +15,4 @@ jobs:
         run: |
           curl -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
                -d chat_id=$TELEGRAM_CHAT_ID \
-               -d text="тест"
+               -d text="Тестовое сообщение"
