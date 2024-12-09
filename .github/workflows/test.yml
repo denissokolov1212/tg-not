@@ -1,7 +1,7 @@
 name: TestBot
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:  
 
 jobs:
   send-message:
